@@ -1,0 +1,204 @@
+git config --global user.name "F0res1er"
+
+git config --global user.email "artemuvarov560@gmail.com"
+
+git config --global init.defaultBranch main
+
+apt update
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://ru.archive.ubuntu.com/ubuntu noble InRelease
+Get:2 http://ru.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:3 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Hit:4 http://ru.archive.ubuntu.com/ubuntu noble-backports InRelease
+Get:5 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1,146 kB]
+Get:6 http://security.ubuntu.com/ubuntu noble-security/main Translation-en [231 kB]
+Get:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1,222 kB]
+Fetched 2,851 kB in 2s (1,232 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+96 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+apt install git gh
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+git is already the newest version (1:2.43.0-1ubuntu7.4).
+git set to manually installed.
+The following NEW packages will be installed:
+  gh
+0 upgraded, 1 newly installed, 0 to remove and 96 not upgraded.
+Need to get 8,836 kB of archives.
+After this operation, 45.4 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Get:1 http://ru.archive.ubuntu.com/ubuntu noble-updates/universe amd64 gh amd64 2.45.0-1ubuntu0.3 [8,836 kB]
+Fetched 8,836 kB in 1s (10.6 MB/s)
+Selecting previously unselected package gh.
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 125711 files and directories currently installed.)
+Preparing to unpack .../gh_2.45.0-1ubuntu0.3_amd64.deb ...
+Unpacking gh (2.45.0-1ubuntu0.3) ...
+Setting up gh (2.45.0-1ubuntu0.3) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+
+Running kernel seems to be up-to-date.
+
+Restarting services...
+
+Service restarts being deferred:
+ /etc/needrestart/restart.d/dbus.service
+ systemctl restart systemd-logind.service
+ systemctl restart unattended-upgrades.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+
+ssh-keygen -t ed25519 -f ~/.ssh/eltex-pg2-v17
+gh auth login
+gh auth setup-git --hostname github.com
+gh auth status
+github.com
+  ✓ Logged in to github.com account F0res1er (/root/.config/gh/hosts.yml)
+  - Active account: true
+  - Git operations protocol: ssh
+  - Token: gho_************************************
+  - Token scopes: 'admin:public_key', 'gist', 'read:org', 'repo'
+gh repo create --public Eltex-practice-Uvarov
+https://github.com/F0res1er/Eltex-practice-Uvarov
+mkdir ~/Eltex-practice-Uvarov && cd ~/Eltex-practice-Uvarov
+
+echo "# Практические работы по модулям ELTEX" >> README.md
+
+git init
+Initialized empty Git repository in /root/Eltex-practice-Uvarov/.git/
+
+git add README.md
+
+git commit -m "first commit"
+[main (root-commit) 2ad5bc0] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+git branch -M main
+
+git remote add origin https://github.com/F0res1er/eltex-practice.git
+
+git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	practice2_eltex-pg2-v17_part3.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+git push -u origin main
+To https://github.com/F0res1er/Eltex-practice-Uvarov.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+mkdir -p module1/task1
+
+mkdir module1/task2
+
+mkdir module1/task3
+
+git add .
+
+git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   module1/task1/eltex-pg2-v17_part.log
+	new file:   module1/task1/eltex-pg2-v17_part3.log
+	new file:   module1/task1/eltex-pg2-v17_part3_gt20M.log
+	new file:   module1/task1/report_part1.txt
+	new file:   "module1/task1/\320\237\321\200\320\260\320\272\321\202\320\270\320\272\320\2601_\320\243\320\262\320\260\321\200\320\276\320\262.pdf"
+
+
+git commit -m "Доавлены файлы отчётов из Практики 1"
+
+git push
+To https://github.com/F0res1er/Eltex-practice-Uvarov.git
+   2ad5bc0..4c11fcc  main -> main
+
+mkdir ~/Eltex-practice-Uvarov_clone && cd ~/Eltex-practice-Uvarov_clone
+
+git clone https://github.com/F0res1er/Eltex-practice-Uvarov.git .
+Cloning into '.'...
+
+echo "Строчка для задания 2.11)))" >> README.md
+
+git add README.md
+
+git commit -m "Обновлён README"
+[main 814b0fe] Обновлён README
+ 1 file changed, 1 insertion(+)
+
+git push
+To https://github.com/F0res1er/Eltex-practice-Uvarov.git
+   4c11fcc..814b0fe  main -> main
+
+git fetch
+From https://github.com/F0res1er/Eltex-practice-Uvarov
+   4c11fcc..814b0fe  main       -> origin/main
+
+commit 814b0fedf3a96577117efccee62a21d725ede703
+Author: F0res1er <artemuvarov560@gmail.com>
+Date:   Wed Oct 21 23:43:53 2026 +0000
+
+    Обновлён README
+
+commit 4c11fcc7b996cf900b19544b9fe66b8037ba2574
+Author: F0res1er <artemuvarov560@gmail.com>
+Date:   Wed Oct 21 23:33:06 2026 +0000
+
+    Доавлены файлы отчётов из Практики 1
+
+commit 2ad5bc0833c8f01e69d4757eac9cef30239683c1
+Author: F0res1er <artemuvarov560@gmail.com>
+Date:   Wed Oct 21 22:50:46 2026 +0000
+
+    first commit
+
+diff --git a/README.md b/README.md
+index 1e60e1a..a1e39a9 100644
+--- a/README.md
++++ b/README.md
+@@ -1 +1,2 @@
+ # Практические работы по модулям ELTEX
++Строчка для задания 2.11)))
+
+git merge origin/main
+Updating 4c11fcc..814b0fe
+Fast-forward
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
