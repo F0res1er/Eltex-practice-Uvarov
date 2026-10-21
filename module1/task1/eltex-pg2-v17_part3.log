@@ -1,0 +1,70 @@
+mkdir -p D1/D2/D3
+
+touch D1/D2/file.txt
+
+echo 'Maxwell cat is funny' :3 > D1/D2/file.txt
+
+cat D1/D2/file.txt
+Maxwell cat is funny :3
+
+ln D1/D2/file.txt D1/D2/D3/file_HL.txt
+
+ln -s ../file.txt D1/D2/D3/file_SL.txt
+
+ls -li D1/D2/file.txt D1/D2/D3/*
+131155 -rw-r--r-- 2 eltex-pg2-v17 eltex-pg2-v17 24 окт 11 03:24 D1/D2/D3/file_HL.txt
+131156 lrwxrwxrwx 1 eltex-pg2-v17 eltex-pg2-v17 11 окт 11 03:47 D1/D2/D3/file_SL.txt -> ../file.txt
+131155 -rw-r--r-- 2 eltex-pg2-v17 eltex-pg2-v17 24 окт 11 03:24 D1/D2/file.txt
+
+mv D1/D2/file.txt D1/file.txt
+cat D1/D2/D3/file_HL.txt
+Maxwell cat is funny :3
+
+cat D1/D2/D3/file_SL.txt
+
+rm -r -f D1/D2
+
+find / -type f -size +20M > "${USER}_part3_gt20M.log"
+
+find / -type f -size +20M -exec du -h {} \;
+31M	/usr/bin/x86_64-linux-gnu-lto-dump-12
+31M	/usr/lib/gcc/x86_64-linux-gnu/12/lto1
+32M	/usr/lib/gcc/x86_64-linux-gnu/12/cc1
+30M	/usr/lib/x86_64-linux-gnu/libicudata.so.72.1
+0	/proc/kcore
+33M	/boot/initrd.img-6.1.0-44-amd64
+33M	/boot/initrd.img-6.1.0-50-amd64
+33M	/boot/initrd.img-6.1.0-53-amd64
+41M	/var/log/journal/8247b53b6ae84ae0ad9bb1c96113fd29/system@4f44ef78d53d4cd0a5555898b8d0015b-0000000000179b0c-000659e0105337c7.journal
+25M	/var/log/journal/8247b53b6ae84ae0ad9bb1c96113fd29/system@00065be42e22b64e-29e46ef12bfd5644.journal~
+42M	/var/log/journal/8247b53b6ae84ae0ad9bb1c96113fd29/system@4f44ef78d53d4cd0a5555898b8d0015b-000000000016aef5-0006585775bcfe03.journal
+33M	/var/log/journal/8247b53b6ae84ae0ad9bb1c96113fd29/system@00065b6e0461a953-e594878e03ffcfa9.journal~
+25M	/var/log/journal/8247b53b6ae84ae0ad9bb1c96113fd29/system@00065c4bf168df91-94a074e01b8fde49.journal~
+25M	/var/log/journal/8247b53b6ae84ae0ad9bb1c96113fd29/system.journal
+39M	/var/cache/apt/srcpkgcache.bin
+39M	/var/cache/apt/pkgcache.bin
+48M	/var/lib/apt/lists/deb.debian.org_debian_dists_bookworm_main_binary-amd64_Packages
+49M	/var/lib/apt/lists/deb.debian.org_debian_dists_bookworm_main_source_Sources
+32M	/var/lib/apt/lists/deb.debian.org_debian_dists_bookworm_main_i18n_Translation-en
+
+find ~ -type f -mmin -1440
+/home/eltex-pg2-v17/eltex-pg2-v17_part.log
+/home/eltex-pg2-v17/eltex-pg2-v17_part3_gt20M.log
+/home/eltex-pg2-v17/.lesshst
+/home/eltex-pg2-v17/eltex-pg2-v17_part3.log
+/home/eltex-pg2-v17/not fully functional
+/home/eltex-pg2-v17/bash
+/home/eltex-pg2-v17/D1/file.txt
+/home/eltex-pg2-v17/.bash_history
+/home/eltex-pg2-v17/export
+/home/eltex-pg2-v17/.bashrc
+
+which find
+/usr/bin/find
+
+file $(which find)
+/usr/bin/find: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=5545a6c7162d325fbe5ffabcbfe4e5521b66ce70, for GNU/Linux 3.2.0, stripped
+file /boot/initrd.img*
+/boot/initrd.img-6.1.0-44-amd64: ASCII cpio archive (SVR4 with no CRC)
+/boot/initrd.img-6.1.0-50-amd64: ASCII cpio archive (SVR4 with no CRC)
+/boot/initrd.img-6.1.0-53-amd64: ASCII cpio archive (SVR4 with no CRC)

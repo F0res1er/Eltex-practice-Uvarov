@@ -1,0 +1,204 @@
+screen -S `whoami`_part2 -L -Logfile "${USER}_part.log"
+
+ls<TAB><TAB>
+ls           lsb_release  lsinitramfs  lslocks      lsmod        lspci
+lsattr       lscpu        lsipc        lslogins     lsns         lsusb
+lsblk        lsfd         lsirq        lsmem        lsof
+
+echo $HIST<TAB><TAB>
+$HISTCMD       $HISTCONTROL   $HISTFILE      $HISTFILESIZE  $HISTSIZE
+
+echo $HISTFILESIZE
+2000
+
+ls -d ~/.*
+/home/eltex-pg2-v17/.bash_history  /home/eltex-pg2-v17/.lesshst
+/home/eltex-pg2-v17/.bash_logout   /home/eltex-pg2-v17/.profile
+/home/eltex-pg2-v17/.bashrc        /home/eltex-pg2-v17/.viminfo
+/home/eltex-pg2-v17/.config
+
+HISTTIMEFORMAT='%F %T '
+history
+    1  2026-10-11 02:19:13 w
+    2  2026-10-11 02:19:13 vi report_part1.txt
+    3  2026-10-11 02:19:13 screen -ls
+    4  2026-10-11 02:19:13 logout
+    5  2026-10-11 02:19:13 man -Lru man
+    6  2026-10-11 02:19:13 export LANG=ru_RU.UTF8
+    7  2026-10-11 02:19:13 screen
+    8  2026-10-11 02:19:13 screem -ls
+    9  2026-10-11 02:19:13 screen -ls
+   10  2026-10-11 02:19:13 screen -r top
+   11  2026-10-11 02:19:13 screen -ls
+   12  2026-10-11 02:19:13 screen -d -r top
+   13  2026-10-11 02:19:13 screen -ls
+   14  2026-10-11 02:19:13 screen -r top
+   15  2026-10-11 02:19:13 screen -ls
+   16  2026-10-11 02:19:13 screen
+   17  2026-10-11 02:19:13 screen -ls
+   18  2026-10-11 02:19:13 logout
+   19  2026-10-11 02:19:13 vi report_part1.txt
+   20  2026-10-11 02:19:13 watch /usr/bin/vmstat
+   21  2026-10-11 02:19:13 screen
+   22  2026-10-11 02:19:13 screem -S top -d -m top
+   23  2026-10-11 02:19:13 screen -S top -d -m top
+   24  2026-10-11 02:19:13 screen -ls
+   25  2026-10-11 02:19:13 screen -r top
+   26  2026-10-11 02:19:13 watch /usr/bin/vmstat
+   27  2026-10-11 02:19:13 vmstat
+   28  2026-10-11 02:19:13 screen -ls
+   29  2026-10-11 02:19:13 screen -r pts-169.eltex-2026-autumn
+   30  2026-10-11 02:19:13 screen -ls
+   31  2026-10-11 02:19:13 screen -S pts-169.eltex-2026-autumn -X quit
+   32  2026-10-11 02:19:13 screen -ls
+   33  2026-10-11 02:19:13 screen -S top -X quit
+   34  2026-10-11 02:19:13 screen -S pts-60.eltex-2026-autumn -X quit
+   35  2026-10-11 02:19:13 screen -ls
+   36  2026-10-11 02:19:13 logout
+   37  2026-10-11 02:19:13 echo `whoami`_part2
+   38  2026-10-11 02:19:13 screen -S `whoami`_part2
+   39  2026-10-11 02:19:13 screen -ls
+   40  2026-10-11 02:19:13 screen -r eltex-pg2-v17_part2
+   41  2026-10-11 02:19:13 screen ls
+   42  2026-10-11 02:19:13 screen -ls
+   43  2026-10-11 02:19:13 screen -ls
+   44  2026-10-11 02:19:13 screen -S eltex-pg2-v17_part2 -X quit
+   45  2026-10-11 02:19:13 screen -ls
+   46  2026-10-11 02:19:13 screen -S `whoami`_part2 -L -Logfile "${USER}_part.log"
+   47  2026-10-11 02:19:13 screen -ls
+   48  2026-10-11 02:19:13 screen -S eltex-pg2-v17_part2 -X quit
+   49  2026-10-11 02:19:13 screen -ls
+   50  2026-10-11 02:19:13 echo "export LANG=ru_RU.UTF8" >>~/.bashrc
+   51  2026-10-11 02:19:13 logout
+   52  2026-10-11 02:23:31 echo $HISTFILESIZE
+   53  2026-10-11 02:30:33 ls -d ~/.*
+   54  2026-10-11 02:36:09 HISTTIMEFORMAT='%F %T '
+   55  2026-10-11 02:36:16 history
+
+date
+Вс 11 окт 2026 02:37:10 +07
+
+history 3
+    55  2026-10-11 02:36:16 history
+    56  2026-10-11 02:37:10 date
+    57  2026-10-11 02:38:18 history 3
+
+tail $HISTFILE
+screen -ls
+screen -ls
+screen -S eltex-pg2-v17_part2 -X quit
+screen -ls
+screen -S `whoami`_part2 -L -Logfile "${USER}_part.log"
+screen -ls
+screen -S eltex-pg2-v17_part2 -X quit
+screen -ls
+echo "export LANG=ru_RU.UTF8" >>~/.bashrc
+logout
+
+PROMPT_COMMAND='history -a'
+echo "Hello"
+Hello
+
+history 3
+    59  2026-10-11 02:40:33 PROMPT_COMMAND='history -a'
+    60  2026-10-11 02:40:53 echo "Hello"
+    61  2026-10-11 02:41:05 history 3
+
+tail $HISTFILE
+#1791661098
+history 3
+#1791661143
+tail $HISTFILE
+#1791661233
+PROMPT_COMMAND='history -a'
+#1791661253
+echo "Hello"
+#1791661265
+history 3
+
+DATE=$(date +%F)
+echo $DATE
+2026-10-11
+
+TIME=$(date +%T)
+echo $TIME
+02:50:53
+
+DATE_TIME="$DATE $TIME"
+echo $DATE_TIME
+2026-10-11 02:50:53
+
+ls /bin/*[0-9]* /sbin/*[0-9]*
+/bin/addr2line                  /bin/x86_64-linux-gnu-ar
+/bin/b2sum                      /bin/x86_64-linux-gnu-as
+/bin/base32                     /bin/x86_64-linux-gnu-c++filt
+/bin/base64                     /bin/x86_64-linux-gnu-cpp
+/bin/bunzip2                    /bin/x86_64-linux-gnu-cpp-12
+/bin/bzip2                      /bin/x86_64-linux-gnu-dwp
+/bin/bzip2recover               /bin/x86_64-linux-gnu-elfedit
+/bin/c89                        /bin/x86_64-linux-gnu-gcc
+/bin/c89-gcc                    /bin/x86_64-linux-gnu-gcc-12
+/bin/c99                        /bin/x86_64-linux-gnu-gcc-ar
+/bin/c99-gcc                    /bin/x86_64-linux-gnu-gcc-ar-12
+/bin/cpan5.36-x86_64-linux-gnu /bin/x86_64-linux-gnu-gcc-nm
+/bin/cpp-12                     /bin/x86_64-linux-gnu-gcc-nm-12
+/bin/diff3                      /bin/x86_64-linux-gnu-gcc-ranlib
+/bin/enc2xs                     /bin/x86_64-linux-gnu-gcc-ranlib-12
+/bin/gcc-12                     /bin/x86_64-linux-gnu-gcov
+/bin/gcc-ar-12                  /bin/x86_64-linux-gnu-gcov-12
+/bin/gcc-nm-12                  /bin/x86_64-linux-gnu-gcov-dump
+/bin/gcc-ranlib-12              /bin/x86_64-linux-gnu-gcov-dump-12
+/bin/gcov-12                    /bin/x86_64-linux-gnu-gcov-tool
+/bin/gcov-dump-12               /bin/x86_64-linux-gnu-gcov-tool-12
+/bin/gcov-tool-12               /bin/x86_64-linux-gnu-gold
+/bin/grub-menulst2cfg           /bin/x86_64-linux-gnu-gp-archive
+/bin/grub-mkpasswd-pbkdf2       /bin/x86_64-linux-gnu-gp-collect-app
+/bin/grub-syslinux2cfg          /bin/x86_64-linux-gnu-gp-display-html
+/bin/h2ph                       /bin/x86_64-linux-gnu-gp-display-src
+/bin/h2xs                       /bin/x86_64-linux-gnu-gp-display-text
+/bin/i386                       /bin/x86_64-linux-gnu-gprof
+/bin/linux32                    /bin/x86_64-linux-gnu-gprofng
+/bin/linux64                    /bin/x86_64-linux-gnu-ld
+/bin/lto-dump-12                /bin/x86_64-linux-gnu-ld.bfd
+/bin/md5sum                     /bin/x86_64-linux-gnu-ld.gold
+/bin/md5sum.textutils           /bin/x86_64-linux-gnu-lto-dump
+/bin/pdb3                       /bin/x86_64-linux-gnu-lto-dump-12
+/bin/pdb3.11                    /bin/x86_64-linux-gnu-nm
+/bin/perl5.36.0                 /bin/x86_64-linux-gnu-objcopy
+/bin/perl5.36-x86_64-linux-gnu /bin/x86_64-linux-gnu-objdump
+/bin/ping4                      /bin/x86_64-linux-gnu-ranlib
+/bin/ping6                      /bin/x86_64-linux-gnu-readelf
+/bin/pl2pm                      /bin/x86_64-linux-gnu-size
+/bin/pod2html                   /bin/x86_64-linux-gnu-strings
+/bin/pod2man                    /bin/x86_64-linux-gnu-strip
+/bin/pod2text                   /sbin/dumpe2fs
+/bin/pod2usage                  /sbin/e2freefrag
+/bin/py3clean                   /sbin/e2fsck
+/bin/py3compile                 /sbin/e2image
+/bin/py3versions                /sbin/e2label
+/bin/pydoc3                     /sbin/e2mmpstatus
+/bin/pydoc3.11                  /sbin/e2scrub
+/bin/pygettext3                 /sbin/e2scrub_all
+/bin/pygettext3.11              /sbin/e2undo
+/bin/python3                    /sbin/e4crypt
+/bin/python3.11                 /sbin/e4defrag
+/bin/sha1sum                    /sbin/fsck.ext2
+/bin/sha224sum                  /sbin/fsck.ext3
+/bin/sha256sum                  /sbin/fsck.ext4
+/bin/sha384sum                  /sbin/killall5
+/bin/sha512sum                  /sbin/mke2fs
+/bin/ssh-argv0                  /sbin/mkfs.ext2
+/bin/systemd-id128              /sbin/mkfs.ext3
+/bin/traceroute6                /sbin/mkfs.ext4
+/bin/traceroute6.db             /sbin/resize2fs
+/bin/x86_64                     /sbin/tune2fs
+/bin/x86_64-linux-gnu-addr2line /sbin/update-grub2
+
+PS1='$USER@$HOSTNAME-$(date +%H:%M)> '
+eltex-pg2-v17@eltex-2026-autumn-02:59> 
+
+eltex-pg2-v17@eltex-2026-autumn-02:59> export PS1
+eltex-pg2-v17@eltex-2026-autumn-03:00> bash --norc -i
+eltex-pg2-v17@eltex-2026-autumn-03:00>
+
+eltex-pg2-v17@eltex-2026-autumn-03:00> mkdir ~/$(date +%Y)-{01..12}
