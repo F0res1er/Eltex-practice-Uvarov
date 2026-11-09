@@ -13,7 +13,7 @@ all: $(TARGET)
 $(TARGET): $(OBJS)
 	$(CC) $(OBJS) -o $@ -lm
 
-%.o: %.c header2.2.h
+%.o: %.c header.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
